@@ -66,6 +66,16 @@ def Check_out():
     out_room = input("Enter room number (1-)" + room_num + ") > ")
     if out_floor != in_floor or out_room != in_room:
         print("This room haven't check in yet")
+    else:
+        confirm = input("Guest's name " + name + " Press 1 to check out and 0 to cancel > ")
+        if confirm == 1:
+            print( name + " have checked out sucessfully ")
+        else: 
+            print( " Check out have been canceled ")
+
+    input("Press Enter to continue...\n")
+    Home()
+
     
 #Define Display
 def Display():
@@ -82,4 +92,3 @@ def Search():
 
     input("Press Enter to continue...\n")
     Home()
-    
