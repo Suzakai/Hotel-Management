@@ -1,6 +1,3 @@
-from turtle import goto
-from unicodedata import name
-
 def Home():
     print("1 - Check in \n")
     print("2 - Check out \n")
@@ -20,11 +17,12 @@ def Home():
             
     elif ch == 3:
         print(" ")
-        Display
+        Display()
         
         
     elif ch == 4:
         print(" ")
+        Search()
             
     elif ch == 5:
         print("Goodbye!")
@@ -33,7 +31,6 @@ def Home():
     else:
         print("No Command avaliable")
         Home()
-
 
 print("---------- Setting up Hotel ----------")
 room_num = input("Enter number of floor:")
@@ -46,24 +43,29 @@ Home()
 
 #Define check_in
 def Check_in():
-    print("Choose Option (1-5) > 1 \n")
+    print("Choose Option (1-5) > 1")
+    global in_floor
+    global in_room
+    global name
     in_floor = input("Enter floor number (1-" + floor_num + ") > ")
-    in_room = input("Enter room number (1-)" + room_num + ") > ")
-    if in_floor > floor_num <= 0 or in_room > room_num <= 0:
+    in_room = input("Enter room number (1-" + room_num + ") > ")
+    if in_floor > floor_num  or in_room > room_num:
         print("Room is Unavailable")
     else:
         name = input("Enter guest's name > ")
-        print(name + "has checked in sucessfully \n")
+        print(name + " has checked in sucessfully")
 
-    input("Press Enter to continue...\n")
+    input("Press Enter to continue...")
     Home()
-      
+
+
+
 #Define Check_out
 def Check_out():
-    print("Choose Option (1-5) > 2 \n")
+    print("Choose Option (1-5) > 2")
     print("Check out process \n")
     out_floor = input("Enter floor number (1-" + floor_num + ") > ")
-    out_room = input("Enter room number (1-)" + room_num + ") > ")
+    out_room = input("Enter room number (1-" + room_num + ") > ")
     if out_floor != in_floor or out_room != in_room:
         print("This room haven't check in yet")
     else:
@@ -73,22 +75,22 @@ def Check_out():
         else: 
             print( " Check out have been canceled ")
 
-    input("Press Enter to continue...\n")
+    input("Press Enter to continue...")
     Home()
 
     
 #Define Display
 def Display():
-    print("Choose Option (1-5) > 3 \n")
+    print("Choose Option (1-5) > 3")
 
 #Define Search 
 def Search():
-    print("Choose Option (1-5) > 4 \n")
+    print("Choose Option (1-5) > 4")
     check_name = input("Enter guest's name > ")
     if check_name == name:
         print(check_name + " Stay on " + in_floor + " and room number " + in_room )
     else:
-        print("Guest no Found \n")
+        print("Guest no Found")
 
-    input("Press Enter to continue...\n")
+    input("Press Enter to continue...")
     Home()
