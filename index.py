@@ -38,11 +38,9 @@ floor_num = input("Enter number of rooms in each floor:")
 print("Hotel is already setup sucessfully with " + floor_num + " floors and "+ room_num + " rooms" )
 print("--------------------------------------")
 
-
-
 #Define check_in
 def Check_in():
-    print("Choose Option (1-5) > 1")
+    print("Choose Option (1-5) > 1")    
     global in_floor 
     global in_room
     global name
