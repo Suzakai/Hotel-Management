@@ -79,7 +79,10 @@ def Check_out():
 #Define Display
 def Display():
     print("Choose Option (1-5) > 3")
-
+    print("Don't know how to do")
+    input("Press Enter to continue...")
+    Home()
+    
 #Define Search 
 def Search():
     print("Choose Option (1-5) > 4")
